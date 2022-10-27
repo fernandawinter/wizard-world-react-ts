@@ -11,5 +11,6 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: rgb(255, 255, 255);
-    height: 200px;
+    height: 3px;
+    min-height: 400px;
 }

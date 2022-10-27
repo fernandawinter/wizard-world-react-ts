@@ -1,15 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './header';
-import Footer from './footer';
+import "./App.css";
+import Header from "./header";
+import Footer from "./footer";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import Characters from "./pages/Characters";
+import Houses from "./pages/Houses";
+import Spells from "./pages/Spells";
 
-function App() {
-    return (
+const App = () => {
+  return (
+    <>
       <div className="App">
-        <Header />
+
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/characters" element={<Characters />} />
+            <Route path="/houses" element={<Houses />} />
+            <Route path="/spells" element={<Spells />} />
+          </Routes>
+        </Router>
         <Footer />
       </div>
-    );
+    </>
+  );
 }
 export default App;
+
+
+
