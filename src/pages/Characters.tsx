@@ -4,7 +4,7 @@ import StickyHeadTable from "../components/table";
 import "./Characters.css";
 
 interface Column {
-	id: 'name' | 'house' | 'dateOfBirth' | 'image';
+	id: 'image' |  'name' | 'house' | 'dateOfBirth';
 	label: string;
 	minWidth?: number;
 	align?: 'right';
@@ -12,17 +12,17 @@ interface Column {
 }
 
 const columns: Column[] = [
-	{ id: 'name', label: 'Name', minWidth: 170 },
-	{ id: 'house', label: 'House', minWidth: 100 },
+	{ id: 'image', label: 'Image', minWidth: 170 },
+	{ id: 'name', label: 'Name', minWidth: 100 },
 	{
-		id: 'dateOfBirth',
-		label: 'Date of Birth',
+		id: 'house',
+		label: 'House',
 		minWidth: 170,
 		format: (value: number) => value.toLocaleString('pt-BR'),
 	},
 	{
-		id: 'image',
-		label: 'Image',
+		id: 'dateOfBirth',
+		label: 'Date of Birth',
 		minWidth: 170,
 		format: (value: number) => value.toLocaleString('en-US'),
 	},
@@ -39,10 +39,10 @@ const Characters = () => {
 
 	const rows = characters.map((character: any) => {
 		return {
+			image: character.image,
 			name: character.name,
 			house: character.house,
-			dateOfBirth: character.dateOfBirth.replace(/-/g, '/'),
-			image: character.image
+			dateOfBirth: character.dateOfBirth.replace(/-/g, '/')
 		}
 	})
 
