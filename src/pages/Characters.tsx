@@ -3,8 +3,9 @@ import { fetchCharacters } from "../api";
 import StickyHeadTable from "../components/table";
 import "./Characters.css";
 
+
 interface Column {
-	id: 'image' |  'name' | 'house' | 'dateOfBirth';
+	id: 'image' | 'name' | 'house' | 'dateOfBirth';
 	label: string;
 	minWidth?: number;
 	align?: 'right';

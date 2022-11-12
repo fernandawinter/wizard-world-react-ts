@@ -9,3 +9,11 @@ export async function fetchCharacters() {
   console.log(response);
   return response.data
 }
+
+export async function fetchHouses() {
+  const endpoint = '/houses';
+  const url = baseUrl + endpoint;
+  const response: any = await axios.get(url);
+  console.log(response);
+  return response.data
+}
