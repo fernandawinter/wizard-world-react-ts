@@ -1,4 +1,6 @@
 import React from "react";
+import { fetchSpells } from "../api";
+import StickyHeadTable from "../components/table";
 
 const Spells = () => {
 	return (
