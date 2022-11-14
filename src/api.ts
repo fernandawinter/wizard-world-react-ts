@@ -17,3 +17,11 @@ export async function fetchHouses() {
   console.log(response);
   return response.data
 }
+
+export async function fetchSpells() {
+  const endpoint = '/spells';
+  const url = baseUrl + endpoint;
+  const response: any = await axios.get(url);
+  console.log(response);
+  return response.data
+}
