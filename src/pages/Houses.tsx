@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { fetchHouses } from "../api";
 import StickyHeadTable from "../components/table";
-import gryffindor from "../gryffindor.png";
+import gryffindor from "../gryffindor.jpeg";
+import slytherin from "../slytherin.jpeg";
+import hufflepuff from "../hufflepuff.jpeg";
+import ravenclaw from "../ravenclaw.jpeg";
 
 interface Column {
 	id: 'Gryffindor' | 'Slytherin' | 'Hufflepuff' | 'Ravenclaw';
@@ -48,6 +51,9 @@ const Houses = () => {
 		<div>
 			<StickyHeadTable rows={rows} columns={columns} />
 			<img src={gryffindor} className="gryffindor-image" alt="gryffindor" />
+			<img src={slytherin} className="slytherin-image" alt="slytherin" />
+			<img src={hufflepuff} className="hufflepuff-image" alt="hufflepuff" />
+			<img src={ravenclaw} className="ravenclaw-image" alt="ravenclaw" />
 		</div>
 	)
 
