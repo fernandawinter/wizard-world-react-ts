@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import "./index.css";
 
 export default function StickyHeadTable({ columns, rows }: { columns: any[], rows: any[] }) {
     const [page, setPage] = React.useState(0);
@@ -55,8 +56,8 @@ export default function StickyHeadTable({ columns, rows }: { columns: any[], row
                                         {columns.map((column) => {
                                             const value = row[column.id];
                                             return (
-                                                <TableCell key={column.id} align={column.align}>
-                                                    {column.id === 'image' ? <img src={value} /> :
+                                                <TableCell key={column.id} align={column.align} >
+                                                    {column.id === 'image' ? <img src={value} className='image' /> :
                                                         column.format && typeof value === 'number'
                                                             ? column.format(value)
                                                             : value}
