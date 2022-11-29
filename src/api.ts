@@ -1,4 +1,5 @@
 import axios from 'axios';
+import vernonDursley from './Vernon-Dursley.jpeg'
 
 const baseUrl = 'https://hp-api.herokuapp.com/api';
 
@@ -7,6 +8,11 @@ export async function fetchCharacters() {
   const url = baseUrl + endpoint;
   const response: any = await axios.get(url);
   console.log(response);
+  const personagens = response.data.map((personagem:any) => {
+    if (!personagem.image) {
+      personagem.image = vernonDursley;
+    }
+  })
   return response.data
 }
 
