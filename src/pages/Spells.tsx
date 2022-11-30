@@ -3,7 +3,7 @@ import { fetchSpells } from "../api";
 import StickyHeadTable from "../components/table";
 
 interface Column {
-	id: 'name' | 'description';
+	id: 'spell' | 'use';
 	label: string;
 	minWidth?: number;
 	align?: 'right';
@@ -11,8 +11,8 @@ interface Column {
 }
 
 const columns: Column[] = [
-	{ id: 'name', label: 'Name', minWidth: 170 },
-	{ id: 'description', label: 'Description', minWidth: 100 },
+	{ id: 'spell', label: 'Name', minWidth: 170 },
+	{ id: 'use', label: 'Description', minWidth: 100 },
 ];
 
 const Spells = () => {
@@ -24,10 +24,10 @@ const Spells = () => {
 		})
 	}, [])
 
-	const rows = spells.map((spell: any) => {
+	const rows = spells.map((name: any) => {
 		return {
-			name: spell.name,
-			description: spell.description,
+			spell: name.spell,
+			use: name.use
 		}
 	})
 

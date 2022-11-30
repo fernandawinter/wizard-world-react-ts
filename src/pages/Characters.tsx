@@ -5,7 +5,7 @@ import "./Characters.css";
 
 
 interface Column {
-	id: 'image' | 'name' | 'house' | 'dateOfBirth';
+	id: 'image' | 'character' | 'hogwartsHouse' | 'interpretedBy';
 	label: string;
 	minWidth?: number;
 	align?: 'right';
@@ -14,15 +14,15 @@ interface Column {
 
 const columns: Column[] = [
 	{ id: 'image', label: 'Image', minWidth: 170 },
-	{ id: 'name', label: 'Name', minWidth: 100 },
+	{ id: 'character', label: 'Name', minWidth: 100 },
 	{
-		id: 'house',
+		id: 'hogwartsHouse',
 		label: 'House',
 		minWidth: 170,
 		format: (value: number) => value.toLocaleString('pt-BR'),
 	},
 	{
-		id: 'dateOfBirth',
+		id: 'interpretedBy',
 		label: 'Date of Birth',
 		minWidth: 170,
 		format: (value: number) => value.toLocaleString('en-US'),
@@ -41,9 +41,9 @@ const Characters = () => {
 	const rows = characters.map((character: any) => {
 		return {
 			image: character.image,
-			name: character.name,
-			house: character.house,
-			dateOfBirth: character.dateOfBirth.replace(/-/g, '/')
+			character: character.character,
+			hogwartsHouse: character.hogwartsHouse,
+			interpretedBy: character.interpretedBy.replace(/-/g, '/')
 		}
 	})
 

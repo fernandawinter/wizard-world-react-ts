@@ -5,10 +5,11 @@ import gryffindor from "../gryffindor.jpeg";
 import slytherin from "../slytherin.jpeg";
 import hufflepuff from "../hufflepuff.jpeg";
 import ravenclaw from "../ravenclaw.jpeg";
+import "./Houses.css";
 
 const Houses = () => {
 	return (
-		<div>
+		<div className="house-image">
 			<img src={gryffindor} className="gryffindor-image" alt="gryffindor" />
 			<img src={slytherin} className="slytherin-image" alt="slytherin" />
 			<img src={hufflepuff} className="hufflepuff-image" alt="hufflepuff" />
