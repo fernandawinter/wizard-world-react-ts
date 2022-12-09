@@ -24,10 +24,10 @@ const Spells = () => {
 		})
 	}, [])
 
-	const rows = spells.map((name: any) => {
+	const rows = spells.map((spells: any) => {
 		return {
-			spell: name.spell,
-			use: name.use
+			spell: spells.spell,
+			use: spells.use
 		}
 	})
 
