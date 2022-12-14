@@ -13,16 +13,17 @@ function Header() {
             Characters
           </button>
         </Link>
-        <Link to="/spells">
-          <button className="button">
-            Spells
-          </button>
-        </Link>
         <Link to="/houses">
           <button className="button">
             Houses
           </button>
         </Link>
+        <Link to="/spells">
+          <button className="button">
+            Spells
+          </button>
+        </Link>
+
       </div>
     </header>
   )

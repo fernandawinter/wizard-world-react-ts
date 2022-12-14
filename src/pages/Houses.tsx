@@ -9,11 +9,11 @@ import "./Houses.css";
 
 const Houses = () => {
 	return (
-		<div className="house-image">
-			<img src={gryffindor} className="gryffindor-image" alt="gryffindor" />
-			<img src={slytherin} className="slytherin-image" alt="slytherin" />
-			<img src={hufflepuff} className="hufflepuff-image" alt="hufflepuff" />
-			<img src={ravenclaw} className="ravenclaw-image" alt="ravenclaw" />
+		<div className="house-images">
+			<img src={gryffindor} alt="gryffindor" />
+			<img src={slytherin} alt="slytherin" />
+			<img src={hufflepuff} alt="hufflepuff" />
+			<img src={ravenclaw} alt="ravenclaw" />
 		</div>
 	)
 
