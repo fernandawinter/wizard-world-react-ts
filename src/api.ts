@@ -24,3 +24,11 @@ export async function fetchSpells() {
   console.log(response);
   return response.data
 }
+
+export async function fetchBooks() {
+  const endpoint = '/books';
+  const url = baseUrl + endpoint;
+  const response: any = await axios.get(url);
+  console.log(response);
+  return response.data
+}

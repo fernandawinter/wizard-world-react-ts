@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Characters from "./pages/Characters";
 import Houses from "./pages/Houses";
 import Spells from "./pages/Spells";
+import Books from "./pages/Books";
 
 const App = () => {
   return (
@@ -20,9 +21,10 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/characters" element={<Characters />} />
             <Route path="/houses" element={<Houses />} />
             <Route path="/spells" element={<Spells />} />
-            <Route path="/characters" element={<Characters />} />
+            <Route path="/books" element={<Books />} />
           </Routes>
         </Router>
         <Footer />

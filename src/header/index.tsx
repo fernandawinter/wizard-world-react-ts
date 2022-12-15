@@ -26,6 +26,11 @@ function Header() {
             Spells
           </button>
         </Link>
+        <Link to="/books">
+          <button className="button">
+            Books
+          </button>
+        </Link>
 
       </div>
     </header>
