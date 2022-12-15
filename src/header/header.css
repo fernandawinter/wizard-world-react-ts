@@ -29,3 +29,8 @@
   cursor: pointer;
   margin: 1rem;
 }
+
+.home-title {
+  color: rgb(249, 249, 249);
+  text-decoration: none;
+}
