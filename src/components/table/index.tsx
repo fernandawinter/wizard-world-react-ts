@@ -30,7 +30,6 @@ export default function StickyHeadTable({ columns, rows }: { columns: any[], row
                     <TableHead>
                         <TableRow>
                             {columns.map((column) => {
-                                console.log('column: ', column)
                                 return (
                                     <TableCell
                                         key={column.id}
@@ -47,7 +46,6 @@ export default function StickyHeadTable({ columns, rows }: { columns: any[], row
                         {rows
                             .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                             .map((row) => {
-                                console.log('row', row)
                                 return (
                                     <TableRow hover role="checkbox" tabIndex={-1} key={row.name}>
                                         {columns.map((column) => {

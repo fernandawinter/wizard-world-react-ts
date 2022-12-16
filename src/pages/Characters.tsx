@@ -5,7 +5,7 @@ import "./Characters.css";
 
 
 interface Column {
-	id: 'image' | 'character' | 'nickname' | 'hogwartsHouse' | 'interpretedBy';
+	id: 'image' | 'character' | 'nickname' | 'hogwartsHouse' | 'interpretedBy' | 'hogwartsStudent';
 	label: string;
 	minWidth?: number;
 	align?: 'right';
@@ -23,6 +23,7 @@ const columns: Column[] = [
 	},
 	{ id: 'hogwartsHouse', label: 'Hogwarts House', minWidth: 100 },
 	{ id: 'interpretedBy', label: 'Interpreted By', minWidth: 100 },
+	{ id: 'hogwartsStudent', label: 'Is Hogwarts Student', minWidth: 100}
 ];
 
 const Characters = () => {
@@ -40,8 +41,8 @@ const Characters = () => {
 			character: character.character,
 			nickname: character.nickname,
 			hogwartsHouse: character.hogwartsHouse,
-			interpretedBy: character.interpretedBy
-
+			interpretedBy: character.interpretedBy,
+			hogwartsStudent: character.hogwartsStudent
 		}
 	})
 
@@ -50,8 +51,6 @@ const Characters = () => {
 			<StickyHeadTable rows={rows} columns={columns} />
 		</div>
 	)
-
-
 
 }
 
