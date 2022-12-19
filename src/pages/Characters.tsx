@@ -35,7 +35,6 @@ const Characters = () => {
 		})
 	}, [])
 
-	console.log('fora do array de characters', characters);
 	const rows = characters.map((character: any) => {
 		return {
 			id: character.id,
