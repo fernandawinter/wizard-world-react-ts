@@ -6,9 +6,9 @@ function Header() {
 
   return (
     <header className="App-header">
-      <a href="http://localhost:3000/" className="home-title">
+      <Link to="/" className="home-title">
         <h1>The Magical World of Harry Potter</h1>
-      </a>
+      </Link>
 
       <div className="content">
         <Link to="/characters">

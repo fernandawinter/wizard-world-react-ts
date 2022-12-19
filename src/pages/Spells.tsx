@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { idText } from "typescript";
 import { fetchSpells } from "../api";
 import StickyHeadTable from "../components/table";
 
@@ -24,10 +25,11 @@ const Spells = () => {
 		})
 	}, [])
 
-	const rows = spells.map((spells: any) => {
+	const rows = spells.map((spell: any) => {
 		return {
-			spell: spells.spell,
-			use: spells.use
+			id: spell.id,
+			spell: spell.spell,
+			use: spell.use
 		}
 	})
 

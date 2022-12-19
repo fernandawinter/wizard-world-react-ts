@@ -23,7 +23,7 @@ const columns: Column[] = [
 	},
 	{ id: 'hogwartsHouse', label: 'Hogwarts House', minWidth: 100 },
 	{ id: 'interpretedBy', label: 'Interpreted By', minWidth: 100 },
-	{ id: 'hogwartsStudent', label: 'Is Hogwarts Student', minWidth: 100}
+	{ id: 'hogwartsStudent', label: 'Is Hogwarts Student', minWidth: 100 }
 ];
 
 const Characters = () => {
@@ -35,14 +35,16 @@ const Characters = () => {
 		})
 	}, [])
 
+	console.log('fora do array de characters', characters);
 	const rows = characters.map((character: any) => {
 		return {
+			id: character.id,
 			image: character.image,
 			character: character.character,
 			nickname: character.nickname,
-			hogwartsHouse: character.hogwartsHouse,
+			hogwartsHouse: character.hogwartsHouse === 'ninguna' ? '' : character.hogwartsHouse,
 			interpretedBy: character.interpretedBy,
-			hogwartsStudent: character.hogwartsStudent
+			hogwartsStudent: character.hogwartsStudent ? 'yes' : 'no'
 		}
 	})
 
