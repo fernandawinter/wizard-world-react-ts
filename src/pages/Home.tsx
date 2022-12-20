@@ -12,7 +12,8 @@ const Home = () => {
                 This is a work that will be improved, because I know that there is still a lot to learn.
             </h3>
             <h3>
-                The API chosen to be used was https://harry-potter-api-en.onrender.com/.
+                The API chosen to be used was 
+                <a className="api" href="https://harry-potter-api-en.onrender.com/" target="_blank" rel="noopener noreferrer">Harry Potter API</a> 
             </h3>
         </div>
 
