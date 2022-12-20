@@ -27,6 +27,7 @@ const Books = () => {
 
 	const rows = books.map((books: any) => {
 		return {
+			id: books.id,
 			title: books.title,
 			releaseDay: books.releaseDay,
             description: books.description
