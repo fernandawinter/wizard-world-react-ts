@@ -41,7 +41,7 @@ const Characters = () => {
 			image: character.image,
 			character: character.character,
 			nickname: character.nickname,
-			hogwartsHouse: character.hogwartsHouse === 'ninguna' ? '' : character.hogwartsHouse,
+			hogwartsHouse: character.hogwartsHouse === 'none' ? '' : character.hogwartsHouse,
 			interpretedBy: character.interpretedBy,
 			hogwartsStudent: character.hogwartsStudent ? 'yes' : 'no'
 		}
